@@ -1,0 +1,54 @@
+.scroll-cta {
+  animation: scroll-cta 1s infinite;
+}
+
+.text-wave {
+  // On hover, animate all the child spans
+  &:hover {
+    span {
+      animation: text-wave 1s;
+    }
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  // Delay each letter by 0.1s
+  @for $i from 1 through 9 {
+    span:nth-child(#{$i}) {
+      animation-delay: 0.1s * $i;
+    }
+  }
+}
+
+@keyframes text-wave {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    color: #f1f5f9;
+  }
+  50% {
+    transform: scale(1.4);
+    color: #fb923c;
+  }
+  75% {
+    color: #f1f5f9;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scroll-cta {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

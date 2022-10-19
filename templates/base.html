@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jan Krüger</title>
+    <!-- Include Tailwind CSS -->
+    <link rel="stylesheet" href="{{get_url(path="styles/styles.css") }}"> <link
+    rel="icon" type="image/png" href="{{get_url(path="/favicon.png") }} " />
+    <link rel="stylesheet" href="{{get_url(path="/hamburger.css")}}"> {% block
+    head %} {% endblock head %}
+    <!-- Include hamburger script -->
+    <script src="{{get_url(path="/js/hamburger.js")}}" defer></script>
+  </head>
+
+  <body class="bg-slate-800 text-slate-100">
+    <button class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    {% block content %} {% endblock %}
+  </body>
+</html>
