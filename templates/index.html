@@ -1,5 +1,9 @@
-{% extends "base.html" %} {% block head %} <link rel="stylesheet"
-href="{{get_url(path="/animations.css") }}"> {% endblock head %} {% block
+{% extends "base.html" %} {% block head %} 
+<link rel="stylesheet" href="{{get_url(path="/animations.css") }}"> 
+<link rel="stylesheet" href="{{get_url(path="/landing.css") }}"> 
+<script src="{{get_url(path="/js/tech.js")}}" defer></script>
+<title>{{section.title}}</title> 
+{% endblock head %} {% block
 content %}
 <section class="h-screen flex justify-center items-center">
   <header class="flex justify-center items-center h-full w-full">
@@ -28,20 +32,51 @@ content %}
 >
   <h1 class="font-bold text-4xl border-b-orange-400 border-b-2">About me</h1>
   <p class="max-w-prose">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim aut quos unde
-    voluptatem eaque et harum, dolorem praesentium aliquid consectetur nemo
-    eligendi ipsum laudantium architecto tempore recusandae voluptate quia!
-    Quos!
+    {{section.extra.about}}
   </p>
+  <div class="flex justify-evenly gap-8 mt-8">
+    <button class="tech-button relative" data-tech-name="angular">
+      <img src="{{get_url(path="icons/angular.svg")}}" alt="Angular" class="tech-icon"> 
+      <div class="tech-info absolute bg-orange-500 text-white tech-card rounded p-2 text-left" id="tech-card-angular">
+        <h1 class="font-semibold text-2xl">Angular</h1>
+        <p class="text-orange-100">Angular is a frontend framework developed by Google.<br>It is heavy opinionated and uses Typescript as language</p>
+      </div>
+    </button>
+    <button class="tech-button relative" data-tech-name="nestjs">
+      <img src="{{get_url(path="icons/nestjs.svg")}}" alt="Nestjs" class="tech-icon"> 
+      <div class="tech-info absolute bg-orange-500 text-white tech-card rounded p-2 text-left" id="tech-card-nestjs">
+        <h1 class="font-semibold text-2xl">NestJS</h1>
+        <p class="text-orange-100">NestJS is a framework used to develop server-side applications using Typescript.<br>It is heavly inspired by Angular and shares many similaritiess</p>
+      </div>
+    </button>
+    <button class="tech-button relative">
+      <img src="{{get_url(path="icons/typescript.svg")}}" alt="Typescript" class="tech-icon"> 
+      <div class="tech-info absolute bg-orange-500 text-white tech-card rounded p-2 text-left" id="tech-card-angular">
+        <h1 class="font-semibold text-2xl">Angular</h1>
+        <p class="text-orange-100">Angular is a Frontend framework developed by Google.<br>It is heavy opinionated and uses Typescript as language</p>
+      </div>
+    </button>
+    <button class="tech-button relative">
+      <img src="{{get_url(path="icons/docker.svg")}}" alt="Nestjs" class="tech-icon"> 
+      <div class="tech-info absolute bg-orange-500 text-white tech-card rounded p-2 text-left" id="tech-card-angular">
+        <h1 class="font-semibold text-2xl">Angular</h1>
+        <p class="text-orange-100">Angular is a Frontend framework developed by Google.<br>It is heavy opinionated and uses Typescript as language</p>
+      </div>
+    </button>
+    <button class="tech-button relative">
+      <img src="{{get_url(path="icons/kubernetes.svg")}}" alt="Nestjs" class="tech-icon"> 
+      <div class="tech-info absolute bg-orange-500 text-white tech-card rounded p-2 text-left" id="tech-card-angular">
+        <h1 class="font-semibold text-2xl">Angular</h1>
+        <p class="text-orange-100">Angular is a Frontend framework developed by Google.<br>It is heavy opinionated and uses Typescript as language</p>
+      </div>
+    </button>
+  </div>
 </section>
 
 <section class="h-screen-2/3 w-full flex items-center p-8 flex-col gap-4">
   <h1 class="font-bold text-4xl border-b-orange-400 border-b-2">Projects</h1>
   <p class="max-w-prose">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim aut quos unde
-    voluptatem eaque et harum, dolorem praesentium aliquid consectetur nemo
-    eligendi ipsum laudantium architecto tempore recusandae voluptate quia!
-    Quos!
+    {{section.extra.projects}}
   </p>
 </section>
 
@@ -50,10 +85,7 @@ content %}
 >
   <h1 class="font-bold text-4xl border-b-orange-400 border-b-2">Blog posts</h1>
   <p class="max-w-prose">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim aut quos unde
-    voluptatem eaque et harum, dolorem praesentium aliquid consectetur nemo
-    eligendi ipsum laudantium architecto tempore recusandae voluptate quia!
-    Quos!
+    {{section.extra.blogPosts}}
   </p>
 </section>
 

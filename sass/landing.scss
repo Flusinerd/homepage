@@ -1,0 +1,49 @@
+.tech-icon {
+    height: 100px;
+
+    transition: transform 400ms ease-in-out;
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.tech-icon.active {
+    transform: scale(1.2);
+}
+
+.tech-card {
+    width: 300px;
+    left: -100px;
+    top: 110px;
+    visibility: hidden;
+    transform-origin: top;
+}
+
+.tech-card.visible {
+    visibility: visible;
+}
+
+.tech-card.animate-in {
+    animation: animate-tech-card-in 1s ease;
+}
+.tech-card.animate-out {
+    animation: animate-tech-card-out 0.5s cubic-bezier(0.550, 0.055, 0.675, 0.190) forwards;
+}
+
+@keyframes animate-tech-card-in {
+    0% {
+        opacity: 0;    
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animate-tech-card-out {
+    0% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
