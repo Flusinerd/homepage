@@ -1,11 +1,11 @@
 {% extends "base.html" %} {% block head %} <link rel="stylesheet"
-href="{{get_url(path="/animations.css") }}">
-<link rel="stylesheet"
-href="{{get_url(path="/index.css") }}"> {% endblock head %} {% block
-content %}
+href="{{get_url(path="/animations.css") }}"> <link rel="stylesheet"
+href="{{get_url(path="/index.css") }}"> {% endblock head %} {% block content %}
 <section class="h-screen flex justify-center items-center">
   <header class="flex justify-center items-center h-full w-full">
-    <h1 class="text-3xl flex-none max-w-min whitespace-nowrap text-wave md:text-5xl">
+    <h1
+      class="text-3xl flex-none max-w-min whitespace-nowrap text-wave md:text-5xl"
+    >
       <span>J</span>
       <span>A</span>
       <span class="mr-4">N</span>
@@ -19,8 +19,9 @@ content %}
   </header>
 
   <div class="absolute bottom-12">
-    <img src="{{get_url(path="icons/mouse.svg")}}" alt="Mouse"> <img
+    <img src="{{get_url(path="icons/mouse.svg")}}" alt="Mouse" width="30"> <img
     src="{{get_url(path="icons/chevron-down.svg" )}}" alt="down-arrow"
+    width="30"
     class="scroll-cta mt-4">
   </div>
 </section>
@@ -85,32 +86,35 @@ content %}
       <!-- App image -->
       <img src="{{get_url(path="projects/smartchef.png")}}" alt="SmartChef"
       class="w-full h-64 object-cover mt-4" />
-      <h3>SmartChef</h3>
-      <p>SmartChef is a smart shopping list that utilizes barcodes for item identification.
-         It provides you amount of goods you need to purchase in order to keep the desired stock level.
+      <h2>SmartChef</h2>
+      <p>
+        SmartChef is a smart shopping list that utilizes barcodes for item
+        identification. It provides you amount of goods you need to purchase in
+        order to keep the desired stock level.
       </p>
     </div>
     <div class="project-card rooftop">
       <!-- App image -->
-      <img src="{{get_url(path="projects/rooftop-background.png")}}" alt="" class="background">
-      <img src="{{get_url(path="projects/rooftop.png")}}" alt="Rooftop"
-      class="w-full h-64 object-contain mt-4" />
+      <img src="{{get_url(path="projects/rooftop-background.png")}}" alt=""
+      class="background"> <img src="{{get_url(path="projects/rooftop.png")}}"
+      alt="Rooftop" class="w-full h-64 object-contain mt-4" />
       <h3>Farmer Companion</h3>
       <p>
-        Farmer Companion is a hybrid app that helps farmers to monitor their crops
-        and get information about the weather. It also provides a automationsystem inspired by Home Assistant 
-        to control devices like the irrigation system.
+        Farmer Companion is a hybrid app that helps farmers to monitor their
+        crops and get information about the weather. It also provides a
+        automationsystem inspired by Home Assistant to control devices like the
+        irrigation system.
       </p>
     </div>
     <div class="project-card">
       <!-- App image -->
-      <img src="{{get_url(path="projects/wip.svg")}}" alt="WIP"
-      class="w-full h-64 object-contain mt-4" />
+      <img src="{{get_url(path="projects/wip.svg")}}" alt="WIP" class="w-full
+      h-64 object-contain mt-4" />
       <h3>ScrumBO</h3>
       <p>
-        ScrumBO is a scrum board that allows you to manage your projects. 
-        It has User Stories, Tasks and Sprints and allows multiple teams to coexist.
-        It is currently in development.
+        ScrumBO is a scrum board that allows you to manage your projects. It has
+        User Stories, Tasks and Sprints and allows multiple teams to coexist. It
+        is currently in development.
       </p>
     </div>
   </div>
@@ -120,8 +124,11 @@ content %}
   class="w-full flex bg-slate-100 text-slate-800 items-center p-8 flex-col gap-4 pb-16"
 >
   <h1 class="font-bold text-4xl border-b-orange-400 border-b-2">Blog posts</h1>
-  <p class="max-w-prose font-semibold">You can find my latest blog posts here.</p>
-  <img src="{{get_url(path="projects/wip.svg")}}" alt="WIP" class="h-screen-1/3">
+  <p class="max-w-prose font-semibold">
+    You can find my latest blog posts here.
+  </p>
+  <img src="{{get_url(path="projects/wip.svg")}}" alt="WIP"
+  class="h-screen-1/3">
   <p>It looks like there are not blog posts available :(</p>
 </section>
 
